@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  db:
+    image: mdillon/postgis:11-alpine
+    environment:
+      POSTGRES_DB: "tracepg"
+      POSTGRES_USER: "tracepg"
+      POSTGRES_PASSWORD: "tracepg"
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./src/main/resources/db/init.sql:/docker-entrypoint-initdb.d/init.sql
+  zipkin:
+    image: openzipkin/zipkin:latest
+    ports:
+      - "9411:9411"
