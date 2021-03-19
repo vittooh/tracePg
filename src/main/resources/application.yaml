@@ -1,4 +1,17 @@
 spring:
+  decorator:
+    datasource:
+      p6spy:
+        enable-logging: true
+        multiline: true
+        logging: slf4j
+        tracing:
+          include-parameter-values: true
+      sleuth:
+        enabled: true
+        include: connection, query, fetch
+  application:
+    name: TracePG
   zipkin:
     base-url: http://localhost:9411
   sleuth:

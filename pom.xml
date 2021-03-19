@@ -57,6 +57,11 @@
             <artifactId>postgresql</artifactId>
             <version>42.2.19</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.gavlyukovskiy</groupId>
+            <artifactId>p6spy-spring-boot-starter</artifactId>
+            <version>1.7.0</version>
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>
