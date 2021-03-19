@@ -12,4 +12,4 @@ The full trace is send to a zipkin server to analysis. We can send this traces t
 
 
 
-VHCS, Digital Layerbrick.
+VHCS, Digital BrickLayer.
